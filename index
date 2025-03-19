@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Arrays Section -->
+<div id="arrays" class="content-section hidden">
+    <div class="flex space-x-4 border-b">
+        <button class="vendor-tab p-2" data-vendor="vendor1">Vendor 1</button>
+        <button class="vendor-tab p-2" data-vendor="vendor2">Vendor 2</button>
+        <button class="vendor-tab p-2" data-vendor="vendor3">Vendor 3</button>
+    </div>
+    <div id="vendor-content-arrays" class="mt-4">Select a vendor</div>
+</div>
+
+<!-- Switches Section -->
+<div id="switches" class="content-section hidden">
+    <div class="flex space-x-4 border-b">
+        <button class="vendor-tab p-2" data-vendor="vendor1">Vendor 1</button>
+        <button class="vendor-tab p-2" data-vendor="vendor2">Vendor 2</button>
+    </div>
+    <div id="vendor-content-switches" class="mt-4">Select a vendor</div>
+</div>
+{% endblock %}
