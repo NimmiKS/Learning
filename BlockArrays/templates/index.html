@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    SAN
+  </title>
+  <!--     Fonts and icons     -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /> -->
+  <!-- Nucleo Icons -->
+  <!-- <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" /> -->
+  <!-- Font Awesome Icons -->
+  <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
+  <!-- <link href="./assets/css/nucleo-svg.css" rel="stylesheet" /> -->
+  <!-- CSS Files -->
+  <link id="pagestyle" href="{% static 'css/argon-dashboard.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+
+  <div class="min-height-300 bg-danger position-absolute w-100"></div>
+
+  <aside
+  class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 "
+  id="sidenav-main">
+  <div class="sidenav-header">
+    <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+      aria-hidden="true" id="iconSidenav"></i>
+
+   <!-- Logo  -->
+      <a class="navbar-brand m-0" href="index.html"
+      target="_blank">
+      <img src="assets/img/logo-ct-dark.png" width="26px" height="26px" class="navbar-brand-img h-100"
+        alt="main_logo">
+      <span class="ms-1 font-weight-bold">Logo Here</span>
+    </a>
+    <!-- Logo end -->
+  </div>
+  <hr class="horizontal dark mt-0">
+  <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link index" href="index.html">
+          <div
+            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-ravelry text-dark text-sm" aria-hidden="true"></i>
+          </div>
+          <span class="nav-link-text ms-1">SAN</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link switch" href="switch.html">
+          <div
+            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-superpowers text-dark text-sm" aria-hidden="true"></i>
+          </div>
+          <span class="nav-link-text ms-1">SWITCH</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  </aside>
+
+  <!-- <div id="sidebar-container"></div> -->
+
+  <main class="main-content position-relative border-radius-lg ">
+
+    <!-- Navbar Dark -->
+    <div id="navbar-container"></div>
+
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-header pb-0 tab-header">
+              <h6>Projects table</h6>
+              <div class="tab">
+
+                <button class="tablinks active" data-id="1" >EMC</button>
+                <button class="tablinks" data-id="2" >Vendor 2</button>
+                <button class="tablinks" data-id="3" >Vendor 3</button>
+              </div>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div id="tab1" class="tabcontent" style="display: block;">
+                <div class="table-responsive p-0">
+                  <table class="table align-items-center justify-content-center mb-0" id="projectTable">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">SL No</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Inventory</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Capacity</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Vmax</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CN</th>
+                        <th
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
+                          SUBS</th>
+                        <th
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
+                          ALOCA</th>
+                        <th
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
+                          PERCENT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr>
+                        <td>
+                          <div class="d-flex px-4">
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">01</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">Lorem Ipsume</span>
+                        </td>
+                        <td><span class="text-xs font-weight-bold">working</span></td>
+                        <td><span class="text-xs font-weight-bold">working</span></td>
+                        <td><span class="text-xs font-weight-bold">working</span></td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">60%</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar  bg-gradient-warning" role="progressbar" aria-valuenow="60"
+                                  aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">100%</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100"
+                                  aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">30%</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30"
+                                  aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                made with <i class="fa fa-heart"></i> by
+                for a better web.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+
+
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+
+</body>
+<script>
+     $(function () {
+      $('#navbar-container').load('navbar.html');
+      $('.nav-link').removeClass('active');
+      $('.index').addClass('active');
+      $('.page-name').text('SAN');
+    });
+
+
+
+  const sampleData = {
+    1: [ // EMC
+      { inventory: 'EMC Rack 1', capacity: '10TB', vmax: 'V1', cn: 'CN001', subs:'50' , aloca:'80', percent:'20' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+      { inventory: 'EMC Rack 2', capacity: '20TB', vmax: 'V2', cn: 'CN002', subs:'100' , aloca:'30', percent:'50' },
+
+    ],
+    2: [ // Vendor 1
+      { inventory: 'V1 Storage A', capacity: '12TB', vmax: 'V1-A', cn: 'CN101', subs:'55' , aloca:'35', percent:'55' },
+      { inventory: 'V1 Storage B', capacity: '18TB', vmax: 'V1-B', cn: 'CN102', subs:'50' , aloca:'100', percent:'10' }
+    ],
+    3: [ // Vendor 2
+      { inventory: 'V2 Shelf X', capacity: '15TB', vmax: 'V2-A', cn: 'CN201', subs:'65' , aloca:'80', percent:'40' },
+      { inventory: 'V2 Shelf Y', capacity: '22TB', vmax: 'V2-B', cn: 'CN202', subs:'55' , aloca:'14', percent:'100' }
+    ]
+  };
+
+  function getProgressColor(percent) {
+    if (percent == 100) return 'bg-gradient-danger';      // Red
+    else if (percent >= 80) return 'bg-gradient-warning'; // Orange
+    else if (percent >= 50) return 'bg-gradient-primary'; // Blue
+    else return 'bg-gradient-success';                       // Green
+  }
+
+  function renderProgress(percent) {
+    const color = getProgressColor(percent);
+    return `
+      <div class="d-flex align-items-center justify-content-center">
+        <span class="me-2 text-xs font-weight-bold">${percent}%</span>
+        <div>
+          <div class="progress">
+            <div class="progress-bar ${color}" role="progressbar" style="width: ${percent}%"
+                 aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  let dataTableInstance;
+
+  function loadData(vendorId) {
+    const data = sampleData[vendorId];
+    const tbodyHTML = data.map((item, index) => {
+      const subs = Math.floor(item.subs );
+      const aloca = Math.floor(item.aloca );
+      const percent = Math.floor(item.percent );
+
+      return `<tr>
+        <td>${index + 1}</td>
+        <td>${item.inventory}</td>
+        <td>${item.capacity}</td>
+        <td>${item.vmax}</td>
+        <td>${item.cn}</td>
+        <td class="text-center">${renderProgress(subs)}</td>
+        <td class="text-center">${renderProgress(aloca)}</td>
+        <td class="text-center">${renderProgress(percent)}</td>
+      </tr>`;
+    }).join('');
+
+    const table = $('#projectTable');
+    table.DataTable().clear().destroy(); // Reset table
+    table.find('tbody').html(tbodyHTML); // Load new data
+
+    // Reinitialize DataTable with export buttons
+    dataTableInstance = table.DataTable({
+      dom: 'Bfrtip',
+      buttons: ['excel'],
+      responsive: true
+    });
+  }
+
+  $(document).ready(function () {
+    $('.tablinks').click(function () {
+      const vendorId = $(this).data('id');
+      $('.tablinks').removeClass('active');
+      $(this).addClass('active');
+      loadData(vendorId);
+    });
+
+    loadData(1); // Default load: EMC
+  });
+</script>
+
+
+</html>
