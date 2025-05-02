@@ -15,9 +15,26 @@ data-scroll="false">
 
 
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary shadow-sm rounded-bottom" id="navbarBlur" data-scroll="false">
+  <div class="container-fluid py-2 px-4">
+    
+    <!-- Logo or Brand (optional) -->
+    <a class="navbar-brand fw-bold text-white" href="{% url 'index' %}">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" height="30" class="d-inline-block align-text-top me-2">
+      MySite
+    </a>
 
-  ^CXRR
-  CCCCCCCCc%CC^TSCFFFFFFFFFFFFF
+    <!-- Breadcrumb and page title -->
+    <div class="d-flex flex-column ms-auto">
+      <ol class="breadcrumb mb-1 bg-transparent p-0">
+        <li class="breadcrumb-item text-sm"><a class="text-light opacity-75" href="javascript:;">Pages</a></li>
+        <li class="breadcrumb-item text-sm text-white active page-name" aria-current="page"></li>
+      </ol>
+      <h6 class="text-white fw-semibold mb-0 page-header"></h6>
+    </div>
+
+  </div>
+</nav>
 
 
 
